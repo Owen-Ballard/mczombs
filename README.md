@@ -1,25 +1,39 @@
+# Mczombs - Minecraft Zombie Wave Mod
 
-Installation information
-=======
+A wave-based zombie survival mod built with NeoForge.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Features
+- Progressive zombie waves that get stronger
+- Zombies spawn near the player
+- Automatic wave system (no manual start)
+- Player respawns with starter gear
+- Shop system using item frames
+- Only zombies spawn (no random mobs)
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## Gameplay
+- Survive waves of zombies
+- Kill all zombies to advance
+- Earn points from kills
+- Buy upgrades through the shop
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## How to Run
+1. Install NeoForge
+2. Open project in IntelliJ or VS Code
+3. Run `runClient`
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## Notes
+- Built for a class project
+- Requires NeoForge to run
+- Best played in survival mode
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Map Credit
+Map: *Medieval Castle & PvP Arena*  
+Created by: Dezsiusz  
+Source: Planet Minecraft  
+Link: https://www.planetminecraft.com/project/medieval-castle-pvp-arena/
+
+This map was downloaded and used under publicly available permissions.  
+All credit for the map design goes to the original creator.
+
+## Author
+Owen Ballard
