@@ -1,0 +1,206 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 2026-04-27 08:19:58
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.Entity.getType()" because "entity" is null
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.WaveManager.clearRandomMobs(WaveManager.java:152) ~[main/:?] {}
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.WaveManager.gameOver(WaveManager.java:181) ~[main/:?] {}
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.Mczombs.onPlayerDeath(Mczombs.java:60) ~[main/:?] {}
+	at net.neoforged.bus.SubscribeEventListener.invoke(SubscribeEventListener.java:50) ~[bus-8.0.5.jar:?] {}
+	at net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar:?] {}
+	at net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar:?] {}
+	at TRANSFORMER/neoforge@26.1.2.10-beta/net.neoforged.neoforge.common.CommonHooks.onLivingDeath(CommonHooks.java:375) ~[neoforge-26.1.2.10-beta-universal.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerPlayer.die(ServerPlayer.java:924) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.LivingEntity.hurtServer(LivingEntity.java:1291) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.player.Player.hurtServer(Player.java:729) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerPlayer.hurtServer(ServerPlayer.java:1035) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1397) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.monster.zombie.Zombie.doHurtTarget(Zombie.java:345) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer,neoforge.coremods:method_redirector}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:129) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:121) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.ZombieAttackGoal.tick(ZombieAttackGoal.java:28) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:63) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:105) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:96) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:730) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:3083) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.aiStep(Mob.java:477) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.monster.Monster.aiStep(Monster.java:46) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2803) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.tick(Mob.java:348) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.monster.zombie.Zombie.tick(Zombie.java:232) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer,neoforge.coremods:method_redirector}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:846) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.level.Level.guardEntityTick(Level.java:535) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.lambda$tick$0(ServerLevel.java:450) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:52) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:430) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1150) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1003) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:146) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1035) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:119) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:776) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:300) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.WaveManager.clearRandomMobs(WaveManager.java:152) ~[main/:?] {}
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.WaveManager.gameOver(WaveManager.java:181) ~[main/:?] {}
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.Mczombs.onPlayerDeath(Mczombs.java:60) ~[main/:?] {}
+	at net.neoforged.bus.SubscribeEventListener.invoke(SubscribeEventListener.java:50) ~[bus-8.0.5.jar:?] {}
+	at net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar:?] {}
+	at net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar:?] {}
+	at TRANSFORMER/neoforge@26.1.2.10-beta/net.neoforged.neoforge.common.CommonHooks.onLivingDeath(CommonHooks.java:375) ~[neoforge-26.1.2.10-beta-universal.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerPlayer.die(ServerPlayer.java:924) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.LivingEntity.hurtServer(LivingEntity.java:1291) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.player.Player.hurtServer(Player.java:729) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerPlayer.hurtServer(ServerPlayer.java:1035) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1397) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.monster.zombie.Zombie.doHurtTarget(Zombie.java:345) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer,neoforge.coremods:method_redirector}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:129) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:121) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.ZombieAttackGoal.tick(ZombieAttackGoal.java:28) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:63) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:105) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:96) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:730) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:3083) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.aiStep(Mob.java:477) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.monster.Monster.aiStep(Monster.java:46) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2803) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.Mob.tick(Mob.java:348) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.entity.monster.zombie.Zombie.tick(Zombie.java:232) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer,neoforge.coremods:method_redirector}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:846) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.level.Level.guardEntityTick(Level.java:535) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.lambda$tick$0(ServerLevel.java:450) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:52) ~[neoforge-26.1.2.10-beta.jar:?] {}
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:zombie (net.minecraft.world.entity.monster.zombie.Zombie)
+	Entity ID: 381
+	Entity Name: Zombie
+	Entity's Exact location: 18.25, -56.00, 57.56
+	Entity's Block location: World: (18,-56,57), Section: (at 2,8,9 in 1,-4,3; chunk contains blocks 16,-64,48 to 31,319,63), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.level.Level.guardEntityTick(Level.java:535) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.lambda$tick$0(ServerLevel.java:450) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:52) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:430) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1150) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1003) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:146) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1035) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:119) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:776) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:300) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; ServerPlayer{name=Dev, id=41, pos=(18.785465238824166, -56.0, 58.48032287576217), mode=SURVIVAL, permission=owner}
+	Chunk stats: 3481
+	Level dimension: minecraft:overworld
+	Level time: 115250 game time, 798193044 day time
+	Level spawn location: World: (39,-59,58), Section: (at 7,5,10 in 2,-4,3; chunk contains blocks 32,-64,48 to 47,319,63), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level name: ZombiesModMap
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Commands: true
+	Known server brands: fabric, neoforge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 61
+	Server weather: Rain time: 33154 (now: false), thunder time: 114857 (now: false)
+Stacktrace:
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.level.ServerLevel.fillReportDetails(ServerLevel.java:1863) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1153) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1003) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:146) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1035) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:119) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:776) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:300) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 26.1.2
+	Minecraft Version ID: 26.1.2
+	Operating System: Mac OS X (x86_64) version 15.7.5
+	Java Version: 25.0.2, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Eclipse Adoptium
+	Memory: 337641472 bytes (322 MiB) / 828375040 bytes (790 MiB) up to 2147483648 bytes (2048 MiB)
+	Memory (heap): init: 128MiB, used: 467MiB, committed: 790MiB, max: 2048MiB
+	Memory (non-head): init: 007MiB, used: 227MiB, committed: 230MiB, max: 000MiB
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i3-1000NG4 CPU @ 1.10GHz
+	Identifier: Intel64 Family 6 Model 126 Stepping 5
+	Microarchitecture: Ice Lake (Client)
+	Frequency (GHz): 1.10
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: Intel Iris Plus Graphics
+	Graphics card #0 vendor: Intel
+	Graphics card #0 VRAM (MiB): 1536.00
+	Graphics card #0 deviceId: 0x8a5c
+	Graphics card #0 versionInfo: Revision ID: 0x0007
+	Memory slot #0 capacity (MiB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 3.73
+	Memory slot #0 type: LPDDR4X
+	Memory slot #1 capacity (MiB): 4096.00
+	Memory slot #1 clockSpeed (GHz): 3.73
+	Memory slot #1 type: LPDDR4X
+	Virtual memory max (MiB): 11264.00
+	Virtual memory used (MiB): 8143.83
+	Swap memory total (MiB): 3072.00
+	Swap memory used (MiB): 1961.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 76931.08, total: 239072.39
+	Space in storage for workdir (MiB): available: 76931.08, total: 239072.39
+	JVM Flags: 1 total; -Xss1M
+	Debug Flags: 0 total; 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/41, l='ServerLevel[ZombiesModMap]', x=18.79, y=-56.00, z=58.48]]
+	Active Data Packs: vanilla, mod_data, mod/mczombs, mod/neoforge
+	Available Data Packs: minecart_improvements, redstone_experiments, trade_rebalance, vanilla, mod/mczombs, mod/neoforge, mod_data
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 5951301893825851284
+	Suppressed Exceptions: ~~NONE~~
+	Type: Integrated Server
+	Is Modded: Definitely; Client brand changed to 'neoforge'; Server brand changed to 'neoforge'
+	Launched Version: 26.1.2.10-beta
+	Class Processors: 
+		00.00%: neoforge:neoforge_dev_dist_cleaner
+		00.00%: neoforge:computing_frames (marker)
+		00.00%: neoforge:runtime_enum_extender
+		04.31%: neoforge:access_transformer
+		00.04%: neoforge:mixin
+		00.00%: neoforge:simple_processors_default (marker)
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.biome.biome
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.block.flowerpotblock
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.levelgen.structure.structure
+		00.28%: neoforge.coremods:method_redirector
+	Mod List: 
+		main                                              |MC Zombs                      |mczombs                       |1.0.0               |Manifest: NOSIGNATURE
+		neoforge-26.1.2.10-beta.jar                       |Minecraft                     |minecraft                     |26.1.2              |Manifest: NOSIGNATURE
+		neoforge-26.1.2.10-beta-universal.jar             |NeoForge                      |neoforge                      |26.1.2.10-beta      |Manifest: NOSIGNATURE
+	Crash Report UUID: 6e2167cb-dad0-4a84-9c79-8db80ff136c1
+	FML: 11.0.5
+	NeoForge: 26.1.2.10-beta

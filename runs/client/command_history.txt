@@ -1,0 +1,13 @@
+/spawnzombies
+/time
+/kill @e[type=!player]
+/die
+/kill @p
+/creative
+/gamemode creative
+/kill @a
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode adventure
+/gamemode creative
