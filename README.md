@@ -24,7 +24,7 @@ A wave-based zombie survival mod built with NeoForge.
 ## Notes
 - Built for a class project
 - Requires NeoForge to run
-- Best played in survival mode
+- Best played in survival mode on the custom map
 
 ## Map Credit
 Map: *Medieval Castle & PvP Arena*  
