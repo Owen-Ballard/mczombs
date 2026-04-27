@@ -1,0 +1,95 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 2026-04-27 10:34:46
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.Entity.getType()" because "entity" is null
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.WaveManager.clearRandomMobs(WaveManager.java:152) ~[main/:?] {}
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.WaveManager.serverTick(WaveManager.java:62) ~[main/:?] {}
+	at TRANSFORMER/mczombs@1.0.0/com.example.mczombs.Mczombs.onServerTick(Mczombs.java:73) ~[main/:?] {}
+	at net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar:?] {}
+	at net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar:?] {}
+	at TRANSFORMER/neoforge@26.1.2.10-beta/net.neoforged.neoforge.event.EventHooks.fireServerTickPost(EventHooks.java:1012) ~[neoforge-26.1.2.10-beta-universal.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1025) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:146) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.processPacketsAndTick(MinecraftServer.java:1035) ~[neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.client.server.IntegratedServer.processPacketsAndTick(IntegratedServer.java:119) ~[neoforge-26.1.2.10-beta.jar:?] {}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:776) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at TRANSFORMER/minecraft@26.1.2/net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:300) [neoforge-26.1.2.10-beta.jar:?] {neoforge:access_transformer}
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 26.1.2
+	Minecraft Version ID: 26.1.2
+	Operating System: Mac OS X (x86_64) version 15.7.5
+	Java Version: 25.0.2, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Eclipse Adoptium
+	Memory: 493492224 bytes (470 MiB) / 825229312 bytes (787 MiB) up to 2147483648 bytes (2048 MiB)
+	Memory (heap): init: 128MiB, used: 314MiB, committed: 787MiB, max: 2048MiB
+	Memory (non-head): init: 007MiB, used: 204MiB, committed: 207MiB, max: 000MiB
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i3-1000NG4 CPU @ 1.10GHz
+	Identifier: Intel64 Family 6 Model 126 Stepping 5
+	Microarchitecture: Ice Lake (Client)
+	Frequency (GHz): 1.10
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: Intel Iris Plus Graphics
+	Graphics card #0 vendor: Intel
+	Graphics card #0 VRAM (MiB): 1536.00
+	Graphics card #0 deviceId: 0x8a5c
+	Graphics card #0 versionInfo: Revision ID: 0x0007
+	Memory slot #0 capacity (MiB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 3.73
+	Memory slot #0 type: LPDDR4X
+	Memory slot #1 capacity (MiB): 4096.00
+	Memory slot #1 clockSpeed (GHz): 3.73
+	Memory slot #1 type: LPDDR4X
+	Virtual memory max (MiB): 10240.00
+	Virtual memory used (MiB): 7820.88
+	Swap memory total (MiB): 2048.00
+	Swap memory used (MiB): 1709.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 79049.03, total: 239072.39
+	Space in storage for workdir (MiB): available: 79049.03, total: 239072.39
+	JVM Flags: 1 total; -Xss1M
+	Debug Flags: 0 total; 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/99, l='ServerLevel[ZombiesModMap]', x=39.50, y=-59.00, z=58.50]]
+	Active Data Packs: vanilla, mod_data, mod/mczombs, mod/neoforge
+	Available Data Packs: minecart_improvements, redstone_experiments, trade_rebalance, vanilla, mod/mczombs, mod/neoforge, mod_data
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 5951301893825851284
+	Suppressed Exceptions: ~~NONE~~
+	Type: Integrated Server
+	Is Modded: Definitely; Client brand changed to 'neoforge'; Server brand changed to 'neoforge'
+	Launched Version: 26.1.2.10-beta
+	Class Processors: 
+		00.00%: neoforge:neoforge_dev_dist_cleaner
+		00.00%: neoforge:computing_frames (marker)
+		00.00%: neoforge:runtime_enum_extender
+		04.35%: neoforge:access_transformer
+		00.04%: neoforge:mixin
+		00.00%: neoforge:simple_processors_default (marker)
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.biome.biome
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.block.flowerpotblock
+		00.01%: neoforge.coremods:field_to_getter.net.minecraft.world.level.levelgen.structure.structure
+		00.28%: neoforge.coremods:method_redirector
+	Mod List: 
+		main                                              |MC Zombs                      |mczombs                       |1.0.0               |Manifest: NOSIGNATURE
+		neoforge-26.1.2.10-beta.jar                       |Minecraft                     |minecraft                     |26.1.2              |Manifest: NOSIGNATURE
+		neoforge-26.1.2.10-beta-universal.jar             |NeoForge                      |neoforge                      |26.1.2.10-beta      |Manifest: NOSIGNATURE
+	Crash Report UUID: 401cdbd2-686b-463f-83a9-6ce848555943
+	FML: 11.0.5
+	NeoForge: 26.1.2.10-beta

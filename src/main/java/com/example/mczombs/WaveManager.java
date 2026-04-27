@@ -6,8 +6,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
@@ -116,7 +115,6 @@ public class WaveManager {
             zombie.setPos(spawnPos.getX() + 0.5, spawnPos.getY(), spawnPos.getZ() + 0.5);
             zombie.setPersistenceRequired();
             zombie.setTarget(player);
-
             zombie.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.LEATHER_HELMET));
 
             level.addFreshEntity(zombie);
@@ -127,6 +125,8 @@ public class WaveManager {
         int count = 0;
 
         for (Entity entity : level.getEntities().getAll()) {
+            if (entity == null) continue;
+
             if (entity.getType() == EntityType.ZOMBIE && entity.isAlive() && entity instanceof Mob mob) {
                 if (mob.isPersistenceRequired()) {
                     count++;
@@ -148,8 +148,10 @@ public class WaveManager {
     }
 
     private static void clearRandomMobs(ServerLevel level) {
-        for (Entity entity : level.getEntities().getAll()) {
-            if (entity instanceof Monster || entity.getType() == EntityType.SLIME) {
+        for (Entity entity : level.getAllEntities()) {
+            if (entity == null || !entity.isAlive()) continue;
+
+            if (!(entity instanceof ServerPlayer) && entity.getType() != EntityType.ZOMBIE) {
                 entity.discard();
             }
         }
