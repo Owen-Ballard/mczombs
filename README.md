@@ -15,8 +15,10 @@ A wave-based zombie survival mod built with NeoForge.
 - Kill all zombies to advance
 - Earn points from kills
 - Buy upgrades through the shop
-- Demo Vid:
-- https://drive.usercontent.google.com/download?id=1xxIeNoqZBQcXhWyNdAkqSwcCRQG8WNfu&export=download&authuser=0&confirm=t&uuid=b80dc0a7-f6de-4570-828c-0b3b9301840c&at=ALBwUgmvGwrkXZUKr_RthDRiDBNX:1777477643482
+- Demo Video for Waves/Points:
+- <https://drive.google.com/file/d/1bKle9raphkYF2K7vtUNlqOeWIgiaq2dv/view?usp=share_link>
+- Demo Video for Shop:
+- <https://drive.google.com/file/d/1jUQ77sFLkN2tD36j2USfhBnkK5wqTTeZ/view?usp=share_link>
 
 
 ## How to Run
